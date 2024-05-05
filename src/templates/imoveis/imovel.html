@@ -1,0 +1,17 @@
+{% extends 'shared/base.html' %}
+{% load static %}
+{% block content %}
+  <main class="d-flex flex-nowrap">
+    <div class="imovel__conteudo">
+      <div class="imovel__info">
+        <p class="imovel__titulo">{{ imovel.titulo }}</p>
+        <p class="imovel__resumo">{{ imovel.resumo }}</p>
+        <p class="imovel__descricao">{{ imovel.descricao }}</p>
+        <p class="imovel__oferta_venda">{{ imovel.oferta_venda }}</p>
+        <p class="imovel__oferta_locacao">{{ imovel.oferta_locacao }}</p>
+        <p class="imovel__disponivel">{{ imovel.disponivel }}</p>
+        <a href="{% url 'editar_imovel' imovel.id %}"><button class="btn btn-success col-12">Editar</button></a>
+      </div>
+    </div>
+  </main>
+{% endblock %}

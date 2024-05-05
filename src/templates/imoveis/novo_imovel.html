@@ -1,0 +1,9 @@
+{% extends 'shared/base.html' %}
+{% load static %}
+{% block content %}
+  <main class="d-flex flex-nowrap">
+    <form action="{% url 'novo_imovel' %}" method="POST" enctype="multipart/form-data">
+      {% include 'partials/_formulario_imovel.html' %}
+    </form>
+  </main>
+{% endblock %}
