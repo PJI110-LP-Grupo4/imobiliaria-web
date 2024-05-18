@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+   <link rel="icon" type="image/png" href="icon.png">
+   <title>Imobiliária WEB</title>
+</head>
+
+<body>
+   <div class="content">
+      <div class="content-left">
+         <div class="login-form">
+            <h2 class="title-main">Entre para continuar</h2>
+            <div class="input-email">
+               <label for="email" class="label-main">E-mail</label>
+               <br />
+               <input type="text" id="campo" name="campo" placeholder="Digite o e-mail" maxlength="50">
+            </div>
+            <div class="input-password">
+               <label for="senha" class="label-main">Senha</label>
+               <br />
+               <input type="password" id="campo" name="campo" placeholder="Digite a senha" maxlength="50">
+            </div>
+            <div class="login-buttons">
+               <button class="login-button" href="/login">Entrar</button>
+               <br />
+               <a class="reset-password" href="/passwordrecovery">Esqueci minha senha</a>
+            </div>
+            <div class="signup-buttons">
+               <button class="signup-button" href="/cadastro.html">Não tem uma conta? Cadastre-se</button>
+            </div>
+         </div>
+      </div>
+      <div class="content-right">
+         <img class="logo" src="logo2.png">
+      </div>
+   </div>
+</body>
+
+<style>
+   body,
+   html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Roboto', sans-serif;
+   }
+
+   .content {
+      display: flex;
+      height: 100%;
+   }
+
+   .content-left,
+   .content-right {
+      flex: 1;
+      height: 100%;
+   }
+
+   .content-right {
+      background-color: #94ebac;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+
+   .content-left {
+      background-color: #E2E2E2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+
+   .logo {
+      width: 600px;
+      min-height: 150px;
+   }
+
+   .content .login-button,
+   .content .signup-button {
+      border: 1px solid #000;
+      border-radius: 10px;
+      padding: 15px 25px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 20px;
+      width: 500px;
+      margin-top: 40px;
+   }
+
+   .content .login-button {
+      background-color: #16466F;
+      color: #fff;
+      margin-bottom: 30px;
+   }
+
+   .content .signup-button {
+      background-color: #fff;
+      color: #000;
+   }
+
+   .content .signup-button:active {
+      background-color: #f0f0f0;
+   }
+
+   .content .login-button:active {
+      background-color: #0d2e46;
+   }
+
+   .content .image-main {
+      width: 500px;
+      min-height: 500px;
+      margin-left: 300px;
+   }
+
+   .title-main {
+      color: #000;
+      font-weight: bold;
+      font-size: 40px;
+   }
+
+   .paragraph-main {
+      color: #000;
+      font-size: 20px;
+   }
+
+   .label-main {
+      color: #000;
+      font-size: 20px;
+   }
+
+   .content input {
+      padding: 10px;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      width: 500px;
+      box-sizing: border-box;
+      margin-top: 5px;
+   }
+
+   .content input:focus {
+      border-color: #007bff;
+      outline: none;
+   }
+
+   .input-email {
+      margin-top: 15px;
+   }
+
+   .input-password {
+      margin-top: 15px;
+   }
+
+   .login-buttons {
+      text-align: center;
+   }
+
+   .signup-buttons {
+      text-align: center;
+      position: fixed;
+      bottom: 20px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+
+   .reset-password {
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: bold;
+      color: #16466F;
+
+   }
+
+   .reset-password:hover {
+      text-decoration: underline;
+      color: #0d2e46;
+   }
+</style>
+
+</html>
