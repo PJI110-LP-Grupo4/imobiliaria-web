@@ -19,18 +19,22 @@
       <li class="nav-item">
         <a href="#" class="nav-link">Favoritos</a>
       </li>
-      <li class="nav-item">
-        <a href="{% url 'entrar' %}" class="nav-link">Entrar</a>
-      </li>
-      <li class="nav-item">
-        <a href="#" class="nav-link">Cadastre-se</a>
-      </li>
+      {% if not user.is_authenticated %}
+        <li class="nav-item">
+          <a href="{% url 'entrar' %}" class="nav-link">Entrar</a>
+        </li>
+        <li class="nav-item">
+          <a href="{% url 'novo_usuario' %}" class="nav-link">Cadastre-se</a>
+        </li>
+      {% endif %}
       <li class="nav-item">
         <a href="#" class="nav-link">Quem Somos</a>
       </li>
-      <li class="nav-item">
-        <a href="#" class="nav-link">Sair</a>
-      </li>
+      {% if user.is_authenticated %}
+        <li class="nav-item">
+          <a href="{% url 'sair' %}" class="nav-link">Sair</a>
+        </li>
+      {% endif %}
     </ul>
   </header>
   {% include 'partials/_alertas.html' %}

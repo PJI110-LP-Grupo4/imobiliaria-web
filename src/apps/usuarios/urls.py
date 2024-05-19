@@ -1,9 +1,9 @@
 from django.urls import path
 
-from apps.usuarios.views import entrar #, cadastro, logout
+from apps.usuarios.views import entrar, novo_usuario, sair
 
 urlpatterns = [
     path("entrar", entrar, name="entrar"),
-#    path("cadastro", cadastro, name="cadastro"),
-#    path("logout", logout, name="logout"),
+    path("novo_usuario", novo_usuario, name="novo_usuario"),
+    path("sair", sair, name="sair"),
 ]
