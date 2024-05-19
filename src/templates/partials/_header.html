@@ -8,7 +8,7 @@
 
     <ul class="nav nav-pills">
       <li class="nav-item">
-        <a href={% url 'index' %} class="nav-link active" aria-current="page">Início</a>
+        <a href="{% url 'index' %}" class="nav-link" aria-current="page">Início</a>
       </li>
       <li class="nav-item">
         <a href="{% url 'meus_imoveis' %}" class="nav-link">Meus Imóveis</a>
@@ -20,7 +20,7 @@
         <a href="#" class="nav-link">Favoritos</a>
       </li>
       <li class="nav-item">
-        <a href="#" class="nav-link">Login</a>
+        <a href="{% url 'entrar' %}" class="nav-link">Entrar</a>
       </li>
       <li class="nav-item">
         <a href="#" class="nav-link">Cadastre-se</a>
@@ -33,4 +33,5 @@
       </li>
     </ul>
   </header>
+  {% include 'partials/_alertas.html' %}
 </div>
