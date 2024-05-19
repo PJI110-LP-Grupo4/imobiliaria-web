@@ -3,6 +3,7 @@
 {% block content %}
   <main class="d-flex flex-nowrap">
     <form action="{% url 'novo_imovel' %}" method="POST" enctype="multipart/form-data">
+      <label class="fw-bold col-form-label col-form-label-lg">Anunciar novo imóvel:</label>
       {% include 'partials/_formulario_imovel.html' %}
     </form>
   </main>

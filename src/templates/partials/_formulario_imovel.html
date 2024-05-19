@@ -1,13 +1,9 @@
-{% load static %}
 {% csrf_token %}
-<div class="row">
-  {% for field in form %}
-    <div class="col-12 col-lg-12">
-      <label for="{{ field.id_for_label }}">{{ field.label }}</label>
-      {{ field }}
-    </div>
-  {% endfor %}
-</div>
-<div>
-  <button type="submit" class="btn btn-success col-12">Salvar</button>
+<div class="container">
+  <div class="row">
+    {% for field in form.visible_fields %}
+      {% include 'partials/inputs/_input_resolver.html' %}
+    {% endfor %}
+    <button type="submit" class="btn btn-success col-12">Salvar</button>
+  </div>
 </div>

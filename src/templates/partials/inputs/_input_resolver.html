@@ -1,0 +1,7 @@
+<div class="pb-1 mb-1">
+  {% if field.field.widget.input_type == 'checkbox' %}
+    {% include 'partials/inputs/_checkbox.html' %}
+  {% else %}
+    {{ field }}
+  {% endif %}
+</div>
