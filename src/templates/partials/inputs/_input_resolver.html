@@ -1,6 +1,8 @@
 <div class="pb-1 mb-1">
   {% if field.field.widget.input_type == 'checkbox' %}
     {% include 'partials/inputs/_checkbox.html' %}
+  {% elif field.field.widget.input_type == 'file' %}
+    {% include 'partials/inputs/_file.html' %}
   {% else %}
     {{ field }}
   {% endif %}
