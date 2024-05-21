@@ -15,6 +15,7 @@ class ImovelForms(forms.ModelForm):
             "oferta_venda": "Venda",
             "oferta_locacao": "Locação",
             "disponivel": "Disponível",
+            "foto_capa": "Foto de Capa",
         }
         widgets = {
             "titulo": forms.TextInput(
@@ -49,5 +50,10 @@ class ImovelForms(forms.ModelForm):
                 attrs={
                     "class": "form-check-input",
                 }
+            ),
+            "foto_capa": forms.FileInput(
+                attrs={
+                    "class": "form-control",
+                },
             ),
         }

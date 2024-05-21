@@ -2,7 +2,7 @@
 <div class="container">
   <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
     <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-      <img src="{% static '/assets/imagens/icon_39x32.png' %}" alt="Logo Imobiliária Web" />
+      <img src="{% static 'assets/imagens/icon_39x32.png' %}" alt="Logo Imobiliária Web" />
       <span class="fs-4 px-2">Imobiliária Web</span>
     </a>
 
@@ -15,9 +15,6 @@
       </li>
       <li class="nav-item">
         <a href="{% url 'novo_imovel' %}" class="nav-link">Cadastrar Imóvel</a>
-      </li>
-      <li class="nav-item">
-        <a href="#" class="nav-link">Favoritos</a>
       </li>
       {% if not user.is_authenticated %}
         <li class="nav-item">

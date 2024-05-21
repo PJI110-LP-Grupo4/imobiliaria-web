@@ -15,8 +15,6 @@ class Imovel(models.Model):
     disponivel = models.BooleanField(default=False)
     usuario = models.ForeignKey(
         to=User,
-        on_delete=models.SET_NULL,
-        null=True,
-        blank=False,
-        related_name="user",
+        on_delete=models.CASCADE,
     )
+    foto_capa = models.ImageField(upload_to="fotos/%Y/%m/%d/", null=False)
