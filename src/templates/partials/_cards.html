@@ -1,11 +1,12 @@
 {% load static %}
-<div class="album py-5">
+{% load humanize %}
+<div class="album">
   <div class="container">
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 justify-content-start">
       {% if cards %}
         {% for imovel in cards %}
           <div class="col">
-            <div class="card shadow-sm">
+            <div class="card shadow-sm" style="width: 18rem;">
               <a href="{% url 'imovel' imovel.id %}">
                 <title>Placeholder</title>
                 {% if imovel.foto_capa %}
@@ -15,8 +16,23 @@
                 {% endif %}
               </a>
               <div class="card-body">
-                <p class="card-text">{{ imovel.titulo }}</p>
+                <h5 class="card-title">{{ imovel.titulo }}</h5>
+                {% if imovel.valor_locacao > 0 %}
+                  <h6 class="card-subtitle mb-2 text-body-secondary">Aluguel: R$ {{ imovel.valor_locacao|floatformat:2|intcomma }}</h6>
+                {% endif %}
+                {% if imovel.valor_venda > 0 %}
+                  <h6 class="card-subtitle mb-2 text-body-secondary">Venda: R$ {{ imovel.valor_venda|floatformat:2|intcomma }}</h6>
+                {% endif %}
                 <p class="card-text">{{ imovel.resumo }}</p>
+                <div class="d-flex justify-content-around">
+                  <h6 class="card-subtitle mb-2 text-body-secondary">Suítes: {{ imovel.quantidade_suites }}</h6>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">Quartos: {{ imovel.quantidade_quartos }}</h6>
+                </div>
+                <div class="d-flex justify-content-around">
+                  <h6 class="card-subtitle mb-2 text-body-secondary">{{ imovel.quantidade_banheiros }}  <i class="bi bi-badge-wc"></i></h6>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">{{ imovel.quantidade_vagas_garagem }}  <i class="bi bi-car-front"></i></h6>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">{{ imovel.metragem_imovel }} m²  <i class="bi bi-arrows-fullscreen"></i></h6>
+                </div>
               </div>
             </div>
           </div>
