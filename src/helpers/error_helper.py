@@ -1,4 +1,6 @@
+from django.shortcuts import redirect
 from django.contrib import messages
+
 
 def tratar_errors(form, request):
     for field in form:

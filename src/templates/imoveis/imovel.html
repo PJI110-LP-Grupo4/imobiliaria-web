@@ -1,15 +1,44 @@
 {% extends 'shared/base.html' %}
 {% load static %}
+{% load humanize %}
 {% block content %}
-  <main class="d-flex flex-nowrap">
-    <div class="imovel__conteudo">
-      <div class="imovel__info">
-        <p class="imovel__titulo">{{ imovel.titulo }}</p>
-        <p class="imovel__resumo">{{ imovel.resumo }}</p>
-        <p class="imovel__descricao">{{ imovel.descricao }}</p>
-        <p class="imovel__oferta_venda">{{ imovel.oferta_venda }}</p>
-        <p class="imovel__oferta_locacao">{{ imovel.oferta_locacao }}</p>
-        <p class="imovel__disponivel">{{ imovel.disponivel }}</p>
+  <main class="d-flex flex-nowrap container">
+    <div class="row p-4 align-items-center rounded-3 border shadow-lg">
+      <title>Placeholder</title>
+      {% if imovel.foto_capa %}
+        <img class="img-fluid rounded" src="{{ imovel.foto_capa.url }}" alt="foto" />
+      {% else %}
+        <img class="img-fluid rounded" src="{% static 'assets/imagens/foto404.png' %}" alt="foto" />
+      {% endif %}
+
+      <div class="card-body pt-3">
+        <h5 class="card-title">{{ imovel.titulo }}</h5>
+        {% if imovel.valor_locacao > 0 %}
+          <h6 class="card-subtitle mb-1 mt-1 text-body-secondary">Aluguel: R$ {{ imovel.valor_locacao|floatformat:2|intcomma }}</h6>
+        {% endif %}
+        {% if imovel.valor_venda > 0 %}
+          <h6 class="card-subtitle mb-1 mt-1 text-body-secondary">Venda: R$ {{ imovel.valor_venda|floatformat:2|intcomma }}</h6>
+        {% endif %}
+        <div class="d-flex justify-content-around">
+          <h6 class="card-subtitle mb-1 mt-1 text-body-secondary">Suítes: {{ imovel.quantidade_suites }}</h6>
+          <h6 class="card-subtitle mb-1 mt-1 text-body-secondary">Quartos: {{ imovel.quantidade_quartos }}</h6>
+          <h6 class="card-subtitle mb-1 mt-1 text-body-secondary"><i class="bi bi-badge-wc"></i> {{ imovel.quantidade_banheiros }}</h6>
+          <h6 class="card-subtitle mb-1 mt-1 text-body-secondary"><i class="bi bi-car-front"></i> {{ imovel.quantidade_vagas_garagem }}</h6>
+          <h6 class="card-subtitle mb-1 mt-1 text-body-secondary"><i class="bi bi-arrows-fullscreen"></i> {{ imovel.metragem_imovel }} m²</h6>
+          <h6 class="card-subtitle mb-1 mt-1 text-body-secondary">{{ imovel.get_categoria_display }}</h6>
+        </div>
+        <p class="card-text">{{ imovel.resumo|linebreaks }}</p>
+        <p class="card-text">
+          <i class="bi bi-whatsapp"></i> <a href="{{ imovel.link_contato }}">{{ imovel.link_contato }}</a>
+        </p>
+        <p class="card-text">{{ imovel.informacoes_contato|linebreaks }}</p>
+        <p class="card-text">{{ imovel.get_cidade_display }}</p>
+        <p class="card-text">{{ imovel.endereco }}</p>
+        <p class="card-text">
+          <i class="bi bi-map"></i> <a href="https://www.google.com/maps/place/{{ imovel.coordenas_geograficas }}">{{ imovel.coordenas_geograficas }}</a>
+        </p>
+      </div>
+      <div class="p-3">
         <a href="{% url 'editar_imovel' imovel.id %}"><button class="btn btn-success col-12">Editar</button></a>
       </div>
     </div>
