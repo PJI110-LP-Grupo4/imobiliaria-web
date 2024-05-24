@@ -5,8 +5,8 @@
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 justify-content-start">
       {% if cards %}
         {% for imovel in cards %}
-          <div class="col">
-            <div class="card shadow-sm" style="width: 18rem;">
+          <div class="col" style="width: 18rem;">
+            <div class="card shadow-sm">
               <a href="{% url 'imovel' imovel.id %}">
                 <title>Placeholder</title>
                 {% if imovel.foto_capa %}
