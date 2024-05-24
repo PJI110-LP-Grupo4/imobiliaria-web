@@ -55,9 +55,21 @@ class ImovelForms(forms.ModelForm):
                     "class": "form-check-input",
                 }
             ),
+            "valor_venda": forms.NumberInput(
+                attrs={
+                    "class": "form-control",
+                    "placeholder": "Ex.: 100123,00",
+                }
+            ),
             "oferta_locacao": forms.CheckboxInput(
                 attrs={
                     "class": "form-check-input",
+                }
+            ),
+            "valor_locacao": forms.NumberInput(
+                attrs={
+                    "class": "form-control",
+                    "placeholder": "Ex.: 1020,00",
                 }
             ),
             "disponivel": forms.CheckboxInput(
@@ -106,18 +118,6 @@ class ImovelForms(forms.ModelForm):
                     "class": "form-select",
                 }
             ),
-            "valor_locacao": forms.NumberInput(
-                attrs={
-                    "class": "form-control",
-                    "placeholder": "Ex.: 1020,00",
-                }
-            ),
-            "valor_venda": forms.NumberInput(
-                attrs={
-                    "class": "form-control",
-                    "placeholder": "Ex.: 100123,00",
-                }
-            ),
             "quantidade_suites": forms.NumberInput(
                 attrs={
                     "class": "form-control",
@@ -149,3 +149,26 @@ class ImovelForms(forms.ModelForm):
                 }
             ),
         }
+
+    field_order = [
+        "titulo",
+        "resumo",
+        "descricao",
+        "oferta_venda",
+        "valor_venda",
+        "oferta_locacao",
+        "valor_locacao",
+        "disponivel",
+        "foto_capa",
+        "link_contato",
+        "informacoes_contato",
+        "cidade",
+        "endereco",
+        "coordenas_geograficas",
+        "categoria",
+        "quantidade_suites",
+        "quantidade_quartos",
+        "quantidade_banheiros",
+        "quantidade_vagas_garagem",
+        "metragem_imovel",
+    ]

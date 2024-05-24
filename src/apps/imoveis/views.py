@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
+from django.db.models import Q
 from django.contrib import messages
 from apps.imoveis.models import Imovel
 from apps.imoveis.forms import ImovelForms
@@ -76,3 +77,21 @@ def editar_imovel(request, imovel_id):
             "imovel_id": imovel_id,
         },
     )
+
+
+def buscar(request):
+    oferta_locacao = "oferta_locacao" in request.GET
+    oferta_venda = "oferta_venda" in request.GET
+
+    print(oferta_locacao)
+    print(oferta_venda)
+
+    imoveis = Imovel.objects
+
+    if oferta_venda != oferta_locacao:
+        imoveis = imoveis.filter(
+            Q(oferta_locacao=oferta_locacao) | Q(oferta_venda=oferta_venda)
+        )
+
+    imoveis = imoveis.order_by("disponivel", "titulo")
+    return render(request, "imoveis/index.html", {"cards": imoveis})
