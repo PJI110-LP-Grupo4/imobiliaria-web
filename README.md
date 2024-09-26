@@ -86,14 +86,21 @@ Este projeto está licenciado sob a licença MIT - consulte o arquivo LICENSE pa
 
 #Integrantes do Projeto
 
-Rogério Gelonezi - [![LinkedIn](https://cdn-icons-png.flaticon.com/512/174/174857.png)]([https://www.linkedin.com](https://www.linkedin.com/in/rogeriogelonezi/))
+Rogério Gelonezi - <a href="https://www.linkedin.com/in/rogeriogelonezi/">
+    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" style="width:20px; height:20px;">
+</a>
 
 
-Leonardo Silva - [![LinkedIn](https://cdn-icons-png.flaticon.com/512/174/174857.png)]([https://www.linkedin.com](https://www.linkedin.com/in/leonardo16silva12/))
 
 
-Mauro Leão - [![LinkedIn](https://cdn-icons-png.flaticon.com/512/174/174857.png)]([https://www.linkedin.com](https://www.linkedin.com/in/mauro-s%C3%A9rgio-bouwman-le%C3%A3o-b62b41260/))
+Leonardo Silva - <a href="https://www.linkedin.com/in/leonardo16silva12/">
+    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" style="width:20px; height:20px;">
+</a>
 
+
+Mauro Leão -<a href="https://www.linkedin.com/in/mauro-s%C3%A9rgio-bouwman-le%C3%A3o-b62b41260/">
+    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" style="width:20px; height:20px;">
+</a>
 
 
 
