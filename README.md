@@ -19,9 +19,9 @@ Virtualenv (opcional, mas recomendado): Documentação do virtualenv
 Instalação
 Siga os passos abaixo para configurar o ambiente localmente:
 
-1. Clone o repositório - git clone https://github.com/seu-usuario/nome-do-repositorio.git
+--1. Clone o repositório - git clone https://github.com/seu-usuario/nome-do-repositorio.git
 cd nome-do-repositorio
-2. Crie e ative um ambiente virtual - # Criar o ambiente virtual
+--2. Crie e ative um ambiente virtual - # Criar o ambiente virtual
 python -m venv venv
 
 Ativar o ambiente virtual
@@ -31,10 +31,10 @@ venv\Scripts\activate
 No Mac/Linux:
 source venv/bin/activate
 
-3. Instale as dependências -
+--3. Instale as dependências -
 pip install -r requirements.txt
 
-4.Configuração do ambiente
+--4.Configuração do ambiente
 
 Crie um arquivo .env na raiz do projeto com as variáveis de ambiente necessárias. Um exemplo de configuração pode ser encontrado no arquivo .env.example.
 
@@ -47,15 +47,15 @@ DATABASE_URL=sqlite:///db.sqlite3
 AWS_ACCESS_KEY_ID=sua_chave_de_acesso
 AWS_SECRET_ACCESS_KEY=sua_chave_secreta
 
-5. Execute as migrações do banco de dados
+--5. Execute as migrações do banco de dados
 
  python manage.py migrate
 
-6. Crie um superusuário - Para acessar a área administrativa do Django, você precisará de um superusuário. Execute o comando abaixo e siga as instruções:
+--6. Crie um superusuário - Para acessar a área administrativa do Django, você precisará de um superusuário. Execute o comando abaixo e siga as instruções:
 
 python manage.py createsuperuser
 
-7. Inicie o servidor de desenvolvimento
+--7. Inicie o servidor de desenvolvimento
 
 python manage.py runserver
 
