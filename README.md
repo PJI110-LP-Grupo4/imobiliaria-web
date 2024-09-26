@@ -1,4 +1,4 @@
-# imobiliaria-web - Centralizador de Imóveis - Projeto Integrador UNIVESP
+# Imobiliaria-web - Centralizador de Imóveis - Projeto Integrador UNIVESP
 Projeto que gerencia imóveis para locação e venda com redirecionamento para imobiliárias
 
 Este projeto foi desenvolvido como parte do Projeto Integrador Semestral da UNIVESP, com o objetivo de criar uma plataforma web para centralizar imóveis de locação e venda, facilitando a busca pela população e agilizando o fechamento de negócios pelas imobiliárias.
@@ -24,11 +24,11 @@ cd nome-do-repositorio
 2. Crie e ative um ambiente virtual - # Criar o ambiente virtual
 python -m venv venv
 
-# Ativar o ambiente virtual
-# No Windows:
+Ativar o ambiente virtual
+No Windows:
 venv\Scripts\activate
 
-# No Mac/Linux:
+No Mac/Linux:
 source venv/bin/activate
 
 3. Instale as dependências -
