@@ -84,8 +84,9 @@ Licença
 Este projeto está licenciado sob a licença MIT - consulte o arquivo LICENSE para mais detalhes.
 
 Integrantes do Projeto
-Rogério Gelonezi - LinkedIn
-Leonardo Silva - LinkedIn
-Mauro Leão - LinkedIn
+Integrantes do Projeto
+Rogério Gelonezi
+Leonardo Silva
+Mauro Leão
 
 
