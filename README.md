@@ -83,10 +83,17 @@ Abra um pull request.
 Licença
 Este projeto está licenciado sob a licença MIT - consulte o arquivo LICENSE para mais detalhes.
 
-Integrantes do Projeto
-Integrantes do Projeto
-Rogério Gelonezi
-Leonardo Silva
-Mauro Leão
+
+#Integrantes do Projeto
+
+Rogério Gelonezi - [![LinkedIn](https://cdn-icons-png.flaticon.com/512/174/174857.png)]([https://www.linkedin.com](https://www.linkedin.com/in/rogeriogelonezi/))
+
+
+Leonardo Silva - [![LinkedIn](https://cdn-icons-png.flaticon.com/512/174/174857.png)]([https://www.linkedin.com](https://www.linkedin.com/in/leonardo16silva12/))
+
+
+Mauro Leão - [![LinkedIn](https://cdn-icons-png.flaticon.com/512/174/174857.png)]([https://www.linkedin.com](https://www.linkedin.com/in/mauro-s%C3%A9rgio-bouwman-le%C3%A3o-b62b41260/))
+
+
 
 
