@@ -41,9 +41,51 @@ venv\Scripts\activate
 source venv/bin/activate
 ```
 3. Instale as dependências
+```bash
 
 pip install -r requirements.txt
-
+```
 4. Configuração do ambiente
+Crie um arquivo .env na raiz do projeto com as variáveis de ambiente necessárias. Um exemplo de configuração pode ser encontrado no arquivo .env.example.
+
+Exemplo de conteúdo do arquivo .env:
+```bash
+DEBUG=True
+SECRET_KEY=sua_chave_secreta
+ALLOWED_HOSTS=localhost,127.0.0.1
+DATABASE_URL=sqlite:///db.sqlite3
+AWS_ACCESS_KEY_ID=sua_chave_de_acesso
+AWS_SECRET_ACCESS_KEY=sua_chave_secreta
+```
+5. Execute as migrações do banco de dados
+```bash
+python manage.py migrate
+```
+6. Crie um superusuário
+Para acessar a área administrativa do Django, você precisará de um superusuário. Execute o comando abaixo e siga as instruções:
+
+```bash
+python manage.py createsuperuser
+
+```
+Agora você pode acessar o projeto em http://127.0.0.1:8000/.
+
+7. Inicie o servidor de desenvolvimento
+python manage.py runserver
+
+Passos para Contribuir:
+Faça um fork do projeto.
+Crie um branch para sua feature. ```bash git checkout -b feature/nova-feature```
+Commit suas mudanças .```bash git commit -m 'Adiciona nova feature```
+Envie para o branch .```bash git push origin feature/nova-feature```
+Abra um pull request.
+
+Licença
+Este projeto está licenciado sob a licença MIT - consulte o arquivo LICENSE para mais detalhes.
+
+Integrantes do Projeto
+Rogério Gelonezi - LinkedIn
+Leonardo Silva - LinkedIn
+Mauro Leão - LinkedIn
 
 
